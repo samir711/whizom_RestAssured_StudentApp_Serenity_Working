@@ -1,0 +1,11 @@
+clean verify -Dtest=com.studentapp.cucumber.StudentRunner
+
+
+clean verify "-Dcucumber.options=--tags @SMOKE" -Dtest=com.studentapp.cucumber.StudentRunner
+
+mvn clean verify -Dserenity.outputDirectory=D:/IntelliJJavaProject/StudentApp/target/site/serenity serenity:aggregate
+
+
+Just call serenity:aggregate after your build is done, e.g.:
+
+mvn serenity:aggregate -Dserenity.outputDirectory=D:/IntelliJJavaProject/StudentApp/target/site/serenity
